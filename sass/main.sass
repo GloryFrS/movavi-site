@@ -1,0 +1,311 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/box-shadow"
+
+
+a
+	&:hover
+		transition: .5s
+::placeholder
+	color: #666
+body
+	transition: 1s
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+ul
+	padding: 0
+	margin: 0
+	li
+		list-style: none
+		a
+			color: #000000
+.fas
+	font-size: 20px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+.header
+	background: $grey
+	padding: 15px 0	
+	.button
+		float: left
+
+.logo
+	width: 186px
+
+.button, .button-more
+	display: block
+	border-radius: 20px
+	background: $red
+	padding: 3px 20px
+	text-align: center
+	width: 145px
+	color: #ffffff
+	font-size: 20px
+	height: 40px
+	&:hover
+		background: $red-hover
+		color: #ffffff
+		text-decoration: none
+.button-more
+	background: #ffffff
+	border: 1px solid $red
+	color: $red
+	margin: auto
+.top-menu
+	nav
+		padding: 0
+		border-bottom: 1px solid #DEDEDE
+		
+.nav-link
+	color: #000000!important
+	font-size: 20px
+	padding-left: 0!important
+	padding-right: 40px!important
+
+input[type=search]  
+  border: none
+  -webkit-transition: all .5s
+  -moz-transition: all .5s
+  transition: all .5s
+  background: $grey
+#search input
+  &[type=search]
+    width: 15px
+    color: transparent
+    cursor: pointer
+    &:hover
+      background-color: $grey
+    &:focus
+      width: 130px
+      padding-left: 32px
+      color: #000
+      background-color: $grey
+      cursor: auto
+  &:-moz-placeholder, &::-webkit-input-placeholder
+    color: transparent
+
+.chronology
+	margin-top: 60px
+.top-post
+	display: flex
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		right: -103px
+		height: 374px
+		width: 338px
+		background-repeat: no-repeat
+		background: url(../img/9945b3988f2b1e56e7b4c0a995ca54a6.png)
+.top-post_title
+	background: #B569B1
+	flex: 40%
+	padding: 120px 20px
+	h1
+		font-size: 40px
+		color: #ffffff
+		font-weight: bold	
+		margin-top: 15px
+.cat
+	font-size: 16px
+	background: #ffffff
+	padding: 10px		
+.top-post_image
+	background: url(../img/photo-1493863641943-9b68992a8d0756.png)		
+	flex: 60%
+	background-repeat: no-repeat
+	background-size: contain
+.title
+	font-size: 40px
+	font-family: Lato,light
+	margin-top: 60px
+.articles
+	margin-top: 40px
+	>.row
+		margin-bottom: 30px
+.tags
+	margin-top: 40px
+	a
+		padding: 9px 20px
+		border: 2px solid #DEDEDE
+		margin-right: 8px
+		&:hover
+			text-decoration: none
+			border-color: $red
+.articles_img
+	width: 253px
+	height: 180px
+	position: relative
+	img 
+		width: 100%
+	.cat
+		position: absolute
+		right: 12px
+		top: 12px
+		color: #000000
+.articles_blk
+	b
+		font-size: 20px
+		line-height: 1
+		color: #000000
+.art_big	
+	-webkit-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
+	-moz-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
+	box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
+	.articles_img
+		width: 100%
+		height: 100%
+		img 
+			position: relative
+			z-index: -1
+			width: 100%
+.counter
+	li 
+		float: left
+		font-size: 13px
+		padding-right: 10px
+.art_big__title
+    position: absolute
+    bottom: 20px
+    font-weight: bold
+    font-size: 40px
+    color: #fff
+    padding: 0px 25px		
+.center
+	text-align: center
+.catTitle
+	display: flex
+	margin-bottom: 40px
+	h2
+		font-weight: bold
+		font-size: 40px
+		position: relative
+		padding-left: 20px
+		margin-right: 42px
+		margin-bottom: 0
+		&:before
+			content: ''
+			width: 8px
+			height: 48px
+			position: absolute
+			background: #3D90D2
+			left: 0
+	.catTitle_menu
+		padding: 0
+		margin: 0
+		border-bottom: 1px solid #DEDEDE
+	li
+		float: left
+		list-style: none
+		a
+			display: block
+			font-size: 20px
+			color: #000000
+			padding: 7px 20px 0 20px
+.formSubscribe
+	border: 2px solid $red
+	padding: 30px
+	form
+		.button
+			font-weight: bold
+		input[type=email]
+			width: 100%
+			border: none
+			border-bottom: 1px solid #000000
+			margin-bottom: 20px
+		
+	h3
+		font-size: 30px
+		font-weight: 600
+footer
+	background: $grey
+	padding: 40px
+	b
+		margin-bottom: 40px
+		display: block
+
+// custom cb
+.cb
+	display: block
+	position: relative
+	padding-left: 35px
+	cursor: pointer
+	font-size: 12px
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: noneuser
+	-select: none
+	margin-top: 10px
+	input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+
+.checkmark
+	position: absolute
+	top: 0
+	left: 0
+	height: 14px
+	width: 14px
+	background-color: #ffffff
+	border: 1px solid #000000
+	border-radius: 3px
+.cb
+  &:hover input ~ .checkmark
+    background-color: #ebebeb
+  input:checked ~ .checkmark
+    background-color: #ebebeb
+
+.checkmark:after
+  content: ""
+  position: absolute
+  display: none
+
+.cb
+  input:checked ~ .checkmark:after
+    display: block
+  .checkmark:after
+    left: 4px
+    top: 0px
+    width: 5px
+    height: 10px
+    border: solid #d63617
+    border-width: 0 3px 3px 0
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+.category
+	margin-top: 55px
+
+
+
+@import "media" // Always at the end
