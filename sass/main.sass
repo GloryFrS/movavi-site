@@ -4,13 +4,10 @@
 @import "_mixins/box-shadow"
 
 
-a
-	&:hover
-		transition: .5s
+
 ::placeholder
 	color: #666
-body
-	transition: 1s
+body	
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -136,7 +133,9 @@ input[type=search]
 .cat
 	font-size: 16px
 	background: #ffffff
-	padding: 10px		
+	padding: 10px
+	transition: .5s
+			
 .top-post_image
 	background: url(../img/photo-1493863641943-9b68992a8d0756.png)		
 	flex: 60%
@@ -160,9 +159,14 @@ input[type=search]
 			text-decoration: none
 			border-color: $red
 .articles_img
-	width: 253px
-	height: 180px
+	width: 100%
+	height: 100%
 	position: relative
+	.counter
+		display: none
+		position: absolute
+		bottom: 15px
+		color: #ffffff
 	img 
 		width: 100%
 	.cat
@@ -171,14 +175,30 @@ input[type=search]
 		top: 12px
 		color: #000000
 .articles_blk
+	&:hover
+		.cat
+			background: $blue
+			color: #ffffff
+		b
+			color: $red
+		a
+			text-decoration: none
+		.counter
+			display: block
+			left: 15px			
 	b
 		font-size: 20px
-		line-height: 1
+		line-height: 23px
+		display: block
 		color: #000000
+		transition: .5s
 .art_big	
 	-webkit-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
 	-moz-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
 	box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
+	.counter
+		display: block!important
+		bottom: -11px
 	.articles_img
 		width: 100%
 		height: 100%
@@ -186,6 +206,8 @@ input[type=search]
 			position: relative
 			z-index: -1
 			width: 100%
+
+	
 .counter
 	li 
 		float: left
@@ -305,6 +327,9 @@ footer
     transform: rotate(45deg)
 .category
 	margin-top: 55px
+	.container
+		>.row
+			margin-bottom: 30px
 
 
 
