@@ -146,8 +146,7 @@ input[type=search]
 		font-family: "Font Awesome 5 Free"
 .chronology
 	margin-top: 60px
-.top-post
-	display: flex
+.top-post	
 	position: relative
 	&:after
 		content: ''
@@ -157,10 +156,12 @@ input[type=search]
 		width: 338px
 		background-repeat: no-repeat
 		background: url(../img/9945b3988f2b1e56e7b4c0a995ca54a6.png)
+.top-post_image
+	overflow: hidden
 .top-post_title
-	background: #B569B1
-	flex: 40%
+	background: #B569B1	
 	padding: 120px 20px
+	height: 450px
 	h1
 		font-size: 40px
 		color: #ffffff
@@ -171,12 +172,7 @@ input[type=search]
 	background: #ffffff
 	padding: 10px
 	transition: .5s
-			
-.top-post_image
-	background: url(../img/photo-1493863641943-9b68992a8d0756.png)		
-	flex: 60%
-	background-repeat: no-repeat
-	background-size: cover
+
 .title
 	font-size: 40px
 	font-family: Lato,light
@@ -187,10 +183,13 @@ input[type=search]
 		margin-bottom: 30px
 .tags
 	margin-top: 40px
+	display: flex
+	flex-wrap: wrap
 	a
 		padding: 9px 20px
 		border: 2px solid #DEDEDE
 		margin-right: 8px
+		margin-bottom: 8px
 		&:hover
 			text-decoration: none
 			border-color: $red
