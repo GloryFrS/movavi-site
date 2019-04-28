@@ -22,7 +22,9 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
-hr 
+hr
+	margin-top: 40px
+	margin-bottom: 20px 
 	
 ul
 	padding: 0
@@ -33,10 +35,22 @@ ul
 			color: #000000
 .fas
 	font-size: 20px
+.fa-ellipsis-h
+	color: $grey-s
 .lang_blk
 	display: flex
-	justify-content: flex-end
-	
+	justify-content: flex-end	
+.not_found	
+	p
+		font-size: 30px
+		position: absolute
+		top: 285px
+		font-weight: 600
+		width: 120%
+	.button-more
+		position: absolute
+		top: 400px
+
 
 .img-responsive
 	display: block
@@ -57,6 +71,7 @@ b, strong
 	padding: 15px 0	
 	.button
 		float: left
+		margin-right: 12px
 
 .logo
 	width: 186px
@@ -83,15 +98,12 @@ b, strong
 .top-menu
 	nav
 		padding: 0
-		border-bottom: 1px solid #DEDEDE
-		
+		border-bottom: 1px solid #DEDEDE		
 .nav-link
 	color: #000000!important
 	font-size: 20px
 	padding-left: 0!important
-	padding-right: 40px!important
-#search
-	padding: 7px
+	padding-right: 40px!important	
 .dropdown
 	padding: 7px
 	.dropdown-toggle
@@ -100,34 +112,38 @@ b, strong
 	min-width: 100%	
 input[type=search]  
   border: none
-  -webkit-transition: all .5s
-  -moz-transition: all .5s
-  transition: all .5s
-  background: $grey
+  -webkit-transition: all .2s
+  -moz-transition: all .2s
+  transition: all .2s
+  background: transparent
 #search input
   &[type=search]
     width: 25px
     color: transparent
     cursor: pointer
-    &:hover
-      background-color: $grey
-    &:focus
-      width: 130px
-      padding-left: 32px
-      color: #000
-      background-color: $grey
-      cursor: auto
+		&:focus			
+			width: 348px
+			height: 40px			
+			color: #000
+			cursor: auto
+			border-bottom: 1px solid #929292
+			margin-left: -290px
+			background: #f4f4f4
   &:-moz-placeholder, &::-webkit-input-placeholder
     color: transparent
 #search 
-	input
-		font-family: "Font Awesome 5 Free"
+	input		
 		padding-left: 25px
-	&:before
-		content: '\f002'		
+		z-index: 3
+		position: relative
+	&:before				
+		content: "\f002"
+		font-weight: 900		
 		position: absolute
-		width: 25px
-		height: 25px
+		font-size: 20px
+		top: 3px
+		z-index: 0
+		font-family: "Font Awesome 5 Free"
 .chronology
 	margin-top: 60px
 .top-post
@@ -136,7 +152,7 @@ input[type=search]
 	&:after
 		content: ''
 		position: absolute
-		right: -160px
+		right: -122px
 		height: 374px
 		width: 338px
 		background-repeat: no-repeat
@@ -248,6 +264,7 @@ input[type=search]
 	text-align: center
 .catTitle
 	display: flex
+	flex-wrap: wrap
 	margin-bottom: 40px
 	h2
 		font-weight: bold
@@ -360,7 +377,85 @@ footer
 	.container
 		>.row
 			margin-bottom: 30px
+.copyright
+	p
+		margin-bottom: 10px
+	ul li
+		float: left
+		padding-right: 15px
+.navbar-toggler
+	margin: auto
+
+// ==
+.panel-title > a
+  display: block
+  padding: 15px
+  color: #555
+  font-size: 16px
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: 1px
+  word-spacing: 3px
+  text-decoration: none
+  &:active
+    display: block
+    padding: 15px
+    color: #555
+    font-size: 16px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 1px
+    word-spacing: 3px
+    text-decoration: none
+
+.panel-heading
+	a
+		&:before
+			font-family: "Font Awesome 5 Free"
+			content: "\f078"
+			display: block
+			font-weight: 900
+			float: right
+			transition: all 0.5s
+	&.active a:before
+		-webkit-transform: rotate(180deg)
+		-moz-transform: rotate(180deg)
+		transform: rotate(180deg)
+.panel-body 
+	ul
+		padding-left: 20px
 
 
+// content-base
+.content-base
+	margin-bottom: 60px
+	.catTitle
+		li
+			a
+				&:nth-child(1)
+					padding-left: 0
+		h1
+			font-size: 80px
+			width: 100%
+.content-about
+	h3
+		font-size: 40px
+		font-weight: bold
+	p
+		font-size: 18px
+.req-email
+	display: flex
+	margin-top: 40px
+	input
+		width: 348px
+		border: 0
+		border-bottom: 1px solid #000000	
+.item-sub
+	display: flex
+	margin-top: 40px
+	b
+		font-size: 20px
+	p
+		font-size: 18px
 
 @import "media" // Always at the end
