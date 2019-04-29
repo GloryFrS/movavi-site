@@ -4,6 +4,12 @@
 @import "_mixins/box-shadow"
 
 
+*
+	a
+		&:hover
+			color: $red
+			text-decoration: none
+
 
 ::placeholder
 	color: #666
@@ -71,7 +77,7 @@ b, strong
 	padding: 15px 0	
 	.button
 		float: left
-		margin-right: 12px
+		margin-right: 40px
 
 .logo
 	width: 186px
@@ -100,16 +106,39 @@ b, strong
 		padding: 0
 		border-bottom: 1px solid #DEDEDE		
 .nav-link
-	color: #000000!important
+	color: #000000
 	font-size: 20px
 	padding-left: 0!important
-	padding-right: 40px!important	
+	padding-right: 0px!important	
+	margin-right: 40px
+	&:hover
+		color: $red
+	&:active
+		border-bottom: 2px solid $red
+		
 .dropdown
-	padding: 7px
+	padding: 7px 0px 0 20px
+	&:hover
+		.dropdown-toggle
+			color: $red
 	.dropdown-toggle
 		color: #000000
 .dropdown-menu
-	min-width: 100%	
+	min-width: 100%
+.dropdown-menu.show
+	top: -25px!important
+	padding-top: 25px
+	padding-bottom: 0
+	border: 0
+	border-radius: 0
+	border-left: 5px solid $red
+.dropdown-item
+	padding: 0px
+	text-align: center
+	padding-bottom: 20px
+.dropdown-toggle
+	&:after
+		display: none	
 input[type=search]  
   border: none
   -webkit-transition: all .2s
@@ -135,7 +164,7 @@ input[type=search]
 	input		
 		padding-left: 25px
 		z-index: 3
-		position: relative
+		position: relative		
 	&:before				
 		content: "\f002"
 		font-weight: 900		
@@ -144,14 +173,22 @@ input[type=search]
 		top: 3px
 		z-index: 0
 		font-family: "Font Awesome 5 Free"
+	&:hover
+		&:before
+			color: $red
+
 .chronology
 	margin-top: 60px
 .top-post	
 	position: relative
+	&:hover
+		.cat
+			background: $blue
+			color: #ffffff
 	&:after
 		content: ''
 		position: absolute
-		right: -122px
+		right: -138px
 		height: 374px
 		width: 338px
 		background-repeat: no-repeat
@@ -187,12 +224,14 @@ input[type=search]
 	flex-wrap: wrap
 	a
 		padding: 9px 20px
-		border: 2px solid #DEDEDE
+		border: 1px solid #DEDEDE
 		margin-right: 8px
 		margin-bottom: 8px
+		color: #000000
 		&:hover
 			text-decoration: none
-			border-color: $red
+			outline: 2px solid $red
+			color: $red
 .articles_img
 	width: 100%
 	height: 100%
@@ -201,7 +240,7 @@ input[type=search]
 		display: none
 		position: absolute
 		bottom: 15px
-		color: #ffffff
+		color: #bdbdbd
 	img 
 		width: 100%
 	.cat
@@ -210,8 +249,8 @@ input[type=search]
 		top: 12px
 		color: #000000
 section.category
-	.articles_blk
-		margin-top: 20px
+	.art_big
+		margin-bottom: 32px
 
 .articles_blk
 	&:hover
@@ -231,17 +270,18 @@ section.category
 		display: block
 		color: #000000
 		transition: .5s
+		display: inline-block
+		margin-top: 20px
 .art_big	
-	-webkit-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
-	-moz-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
-	box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,.5)
+	-webkit-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,0.68)
+	-moz-box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,0.68)
+	box-shadow: inset 0 -96px 69px -25px rgba(0,0,0,0.68)
 	&:hover
-		.cat
-			background: $blue
-			color: #ffffff
+		background: rgba(0,0,0,.20)
+		transition: .5s
 	.counter
 		display: block!important
-		bottom: -11px
+		bottom: -15px
 	.articles_img
 		width: 100%
 		height: 100%
@@ -253,10 +293,12 @@ section.category
 	li 
 		float: left
 		font-size: 13px
-		padding-right: 10px
+		padding-right: 12px
+	span
+		padding-left: 4px
 .art_big__title
     position: absolute
-    bottom: 20px
+    bottom: 35px
     font-weight: bold
     font-size: 40px
     color: #fff
@@ -311,6 +353,9 @@ section.category
 .soc
 	a
 		margin-right: 20px
+		&:hover
+			i 
+				color: $red		
 		i
 			color: #00000070
 			font-size: 20px
@@ -350,11 +395,7 @@ footer
 	background-color: #ffffff
 	border: 1px solid #000000
 	border-radius: 3px
-.cb
-  &:hover input ~ .checkmark
-    background-color: #ebebeb
-  input:checked ~ .checkmark
-    background-color: #ebebeb
+
 
 .checkmark:after
   content: ""
@@ -426,6 +467,10 @@ footer
 .panel-body 
 	ul
 		padding-left: 20px
+.addImg
+	overflow: hidden
+	img
+		width: 100%
 
 
 // content-base
