@@ -4,8 +4,7 @@
 @import "_mixins/box-shadow"
 
 
-*
-	a
+*	a
 		&:hover
 			color: $red
 			text-decoration: none
@@ -39,6 +38,11 @@ ul
 		list-style: none
 		a
 			color: #000000
+.sticky
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 999
 .fas
 	font-size: 20px
 .fa-ellipsis-h
@@ -102,6 +106,7 @@ b, strong
 	color: $red
 	margin: auto
 .top-menu
+	background: #ffffff
 	nav
 		padding: 0
 		border-bottom: 1px solid #DEDEDE		
@@ -178,7 +183,7 @@ input[type=search]
 			color: $red
 
 .chronology
-	margin-top: 60px
+	margin-top: 180px
 .top-post	
 	position: relative
 	&:hover
