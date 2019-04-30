@@ -1,7 +1,5 @@
 @import "vars"
-@import "fonts"
 @import "libs"
-@import "_mixins/box-shadow"
 
 
 *	a
@@ -53,14 +51,15 @@ ul
 .not_found	
 	p
 		font-size: 30px
-		position: absolute
-		top: 285px
 		font-weight: 600
-		width: 120%
+		width: 338px
+		padding-top: 281px
 	.button-more
-		position: absolute
-		top: 400px
-
+		margin: 0
+		
+.not_found-img
+	img 
+		width: 100%
 
 .img-responsive
 	display: block
@@ -78,13 +77,13 @@ b, strong
 
 .header
 	background: $grey
-	padding: 15px 0	
+	padding: 12px 0	
 	.button
 		float: left
 		margin-right: 40px
-
 .logo
 	width: 186px
+	padding: 3px 0
 
 .button, .button-more
 	display: block
@@ -116,60 +115,74 @@ b, strong
 	padding-left: 0!important
 	padding-right: 0px!important	
 	margin-right: 40px
+	position: relative
 	&:hover
 		color: $red
-	&:active
-		border-bottom: 2px solid $red
+	&:active		
+		&::after
+			content: ""
+			height: 2px
+			width: 100%
+			position: absolute
+			background: $red
+			bottom: 0px
+			left: 0
 		
 .dropdown
-	padding: 7px 0px 0 20px
+	padding: 3px 0px 0 20px
 	&:hover
 		.dropdown-toggle
 			color: $red
 	.dropdown-toggle
 		color: #000000
+		font-size: 20px
 .dropdown-menu
 	min-width: 100%
 .dropdown-menu.show
 	top: -25px!important
-	padding-top: 25px
-	padding-bottom: 0
+	left: -3px!important
+	padding: 10px 0
 	border: 0
 	border-radius: 0
 	border-left: 5px solid $red
 .dropdown-item
-	padding: 0px
+	padding: 10px 0
 	text-align: center
-	padding-bottom: 20px
+	font-size: 18px
+	&:hover,&:focus
+		background: none
+		color: $red	
 .dropdown-toggle
 	&:after
 		display: none	
-input[type=search]  
+.header-search  
   border: none
   -webkit-transition: all .2s
   -moz-transition: all .2s
   transition: all .2s
   background: transparent
-#search input
-  &[type=search]
-    width: 25px
-    color: transparent
-    cursor: pointer
-		&:focus			
-			width: 348px
-			height: 40px			
-			color: #000
-			cursor: auto
-			border-bottom: 1px solid #929292
-			margin-left: -290px
-			background: #f4f4f4
+#search .header-search
+	width: 25px
+	color: transparent
+	cursor: pointer
+	&:focus			
+		width: 348px
+		height: 40px			
+		color: #000
+		cursor: auto
+		border-bottom: 1px solid #929292
+		margin-left: -290px
+		background: #f4f4f4
   &:-moz-placeholder, &::-webkit-input-placeholder
     color: transparent
+.header-search:focus ~ #search:before			
+			z-index: 99
+
 #search 
 	input		
 		padding-left: 25px
 		z-index: 3
-		position: relative		
+		position: relative
 	&:before				
 		content: "\f002"
 		font-weight: 900		
@@ -178,24 +191,29 @@ input[type=search]
 		top: 3px
 		z-index: 0
 		font-family: "Font Awesome 5 Free"
+	
 	&:hover
 		&:before
 			color: $red
 
 .chronology
 	margin-top: 180px
+	
 .top-post	
 	position: relative
+	cursor: pointer
+	
 	&:hover
-		.cat
-			background: $blue
-			color: #ffffff
+		.top-post_title
+			width: calc(100% + 40px)
+						
 	&:after
 		content: ''
 		position: absolute
 		right: -138px
 		height: 374px
 		width: 338px
+		top: 15px
 		background-repeat: no-repeat
 		background: url(../img/9945b3988f2b1e56e7b4c0a995ca54a6.png)
 .top-post_image
@@ -204,11 +222,16 @@ input[type=search]
 	background: #B569B1	
 	padding: 120px 20px
 	height: 450px
+	width: 100%
+	transition: all 0.5s ease
+	position: relative
+	z-index: 99
 	h1
 		font-size: 40px
 		color: #ffffff
 		font-weight: bold	
 		margin-top: 15px
+		max-width: 422px
 .cat
 	font-size: 16px
 	background: #ffffff
@@ -219,10 +242,10 @@ input[type=search]
 	font-size: 40px
 	font-family: Lato,light
 	margin-top: 60px
-.articles
+.articles, .content-base
 	margin-top: 40px
-	>.row
-		margin-bottom: 30px
+	.addImg
+			margin-bottom: 32px
 .tags
 	margin-top: 40px
 	display: flex
@@ -253,9 +276,9 @@ input[type=search]
 		right: 12px
 		top: 12px
 		color: #000000
-section.category
-	.art_big
-		margin-bottom: 32px
+
+.art_big
+	margin-bottom: 32px
 
 .articles_blk
 	&:hover
@@ -305,7 +328,7 @@ section.category
     position: absolute
     bottom: 35px
     font-weight: bold
-    font-size: 40px
+    font-size: 30px
     color: #fff
     padding: 0px 25px		
 .center
@@ -332,14 +355,18 @@ section.category
 		padding: 0
 		margin: 0
 		border-bottom: 1px solid #DEDEDE
+		width: 100%
 	li
 		float: left
 		list-style: none
 		a
 			display: block
-			font-size: 20px
+			font-size: 16px
 			color: #000000
 			padding: 7px 20px 0 20px
+			margin-bottom: 7px
+			&:hover
+				color: $red
 .formSubscribe
 	border: 2px solid $red
 	padding: 30px
@@ -362,14 +389,16 @@ section.category
 			i 
 				color: $red		
 		i
-			color: #00000070
+			color: rgba(0,0,0,.5)
 			font-size: 20px
 footer
 	background: $grey
 	padding: 40px 0
 	margin-top: 60px
+	ul > li
+		margin-bottom: 18px
 	b
-		margin-bottom: 40px
+		margin-bottom: 38px
 		display: block
 
 // custom cb
@@ -428,9 +457,16 @@ footer
 .copyright
 	p
 		margin-bottom: 10px
+		font-size: 13px
+		color: rgba(0, 0, 0, 0.5)
 	ul li
 		float: left
-		padding-right: 15px
+		padding-right: 24px
+		a
+			font-size: 13px
+			color: #000000
+			&:hover
+				color: $red
 .navbar-toggler
 	margin: auto
 
@@ -490,6 +526,7 @@ footer
 		h1
 			font-size: 80px
 			width: 100%
+			font-weight: 400
 .content-about
 	h3
 		font-size: 40px

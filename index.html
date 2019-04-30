@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
 	<meta name="theme-color" content="#000">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>	
@@ -19,7 +20,9 @@
 				<div class="row">
 					<div class="col-xl-8 col-md-6 col-6">
 						<div class="logo">
-							<img src="img/logo.svg" alt="">
+							<a href="/">
+								<img src="img/logo.svg" alt="">
+							</a>
 						</div>
 					</div>
 					<div class="col-xl-4 col-md-6 col-6">
@@ -27,7 +30,7 @@
 							<a class="button d-none d-md-block" href="/">Submit post</a>
 							<form id="search">
 								<!-- <i class="fas fa-search"></i> -->
-								<input type="search" placeholder="Enter your request">
+								<input type="text" class="header-search" placeholder="Enter your request">
 							</form>								
 							<div class="dropdown show">
 								<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,6 +39,7 @@
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 									<a class="dropdown-item" href="#">EN</a>
 									<a class="dropdown-item" href="#">RU</a>
+									
 								</div>
 							</div>
 						</div>												
@@ -99,7 +103,7 @@
 			</div>
 			<div class="articles">
 				<div class="row">
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 order-md-1">
 						<div class="articles_blk">
 							<a href="">
 								<div class="articles_img">
@@ -118,7 +122,7 @@
 							
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 order-0 order-md-12">
 						<div class="articles_blk">
 							<a href="">
 								<div class="articles_img">
@@ -135,7 +139,7 @@
 							</a>								
 						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-6 col-sm-12 order-0 order-md-12">
 						<div class="art_big">
 							<a href="">
 								<div class="articles_img">
@@ -166,14 +170,14 @@
 							</a>														
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
+				
+				
+					<div class="col-md-3 col-sm-6 order-0 order-md-12">
 						<div class="addImg">
 							<img src="img/4.png" alt="">
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 order-0 order-md-12">
 						<div class="articles_blk">
 							<a href="">
 								<div class="articles_img">
@@ -185,7 +189,7 @@
 							
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 order-0 order-md-12">
 						<div class="articles_blk">
 							<a href="">
 								<div class="articles_img">
@@ -197,7 +201,7 @@
 							
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 order-0 order-md-12">
 						<div class="articles_blk">
 							<a href="">
 								<div class="articles_img">
@@ -209,9 +213,9 @@
 							
 						</div>
 					</div>					
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
+				
+				
+					<div class="col-md-6 col-sm-12 order-0 order-md-12">
 						<div class="art_big">
 							<a href="">
 								<div class="articles_img">
@@ -242,7 +246,7 @@
 							</a>														
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3 col-sm-6 order-0 order-md-12">
 						<div class="articles_blk">
 							<a href="">
 								<div class="articles_img">
@@ -253,7 +257,7 @@
 							</a>								
 						</div>
 					</div>
-					<div class="col-xl-3 col-md-12 col-sm-6">
+					<div class="col-xl-3 col-md-12 col-sm-6 order-md-0 order-lg-12	">
 						<div class="formSubscribe">
 							<h3>Get all the
 									latest posts</h3>
@@ -376,6 +380,7 @@
 			</div>
 		</div>
 	</section>
+	
 	<footer>
 		<div class="container">
 			<div class="row">
