@@ -50,12 +50,24 @@ ul
 	justify-content: flex-end	
 .not_found	
 	p
-		font-size: 30px
-		font-weight: 600
+		font-size: 30px		
 		width: 338px
 		padding-top: 281px
+		margin-bottom: 18px
 	.button-more
 		margin: 0
+		border: 2px solid $red
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			width: 70px
+			height: 55px
+			background: url(../img/Group246.png)
+			top: 65px
+			left: 16px
+		&:hover
+			border: 2px solid $red-hover
 		
 .not_found-img
 	img 
@@ -80,7 +92,7 @@ b, strong
 	padding: 12px 0	
 	.button
 		float: left
-		margin-right: 40px
+		margin-right: 40px		
 .logo
 	width: 186px
 	padding: 3px 0
@@ -178,6 +190,48 @@ b, strong
 .header-search:focus ~ #search:before			
 			z-index: 99
 
+#search-2	
+	transform: translate(0%,0%)
+	transition: all .4s
+	width: 50px
+	height: 40px
+	background: $grey	
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%		
+		line-height: 32px
+		outline: 0
+		border: 0
+		display: none
+		font-size: 16px
+		padding: 0 8px
+		background: $grey
+		border-bottom: 1px solid rgba(0,0,0,.5)		
+	.fa
+		box-sizing: border-box
+		padding: 10px
+		width: 42.5px
+		height: 42.5px
+		position: absolute
+		top: 0
+		right: 0
+		color: #000000
+		text-align: center		
+		font-size: 20px
+		background: #f4f4f4
+#search-2
+	&:hover
+		width: 320px
+		cursor: pointer
+		margin-left: -233px		
+		.fa    
+			color: $red		
+
+#search-2
+	&:hover input
+    display: block
 #search 
 	input		
 		padding-left: 25px
@@ -190,23 +244,22 @@ b, strong
 		font-size: 20px
 		top: 3px
 		z-index: 0
-		font-family: "Font Awesome 5 Free"
-	
+		font-family: "Font Awesome 5 Free"	
 	&:hover
 		&:before
 			color: $red
+.lang_blk .order-1
+	&:hover + .button
+		display: none!important
 
 .chronology
-	margin-top: 180px
-	
+	margin-top: 180px	
 .top-post	
 	position: relative
 	cursor: pointer
-	
 	&:hover
 		.top-post_title
-			width: calc(100% + 40px)
-						
+			width: calc(100% + 40px)						
 	&:after
 		content: ''
 		position: absolute
@@ -540,10 +593,13 @@ footer
 	input
 		width: 348px
 		border: 0
-		border-bottom: 1px solid #DEDEDE	
+		border-bottom: 1px solid #DEDEDE			
+		margin-right: 128px
+	.button-more
+		margin: 0
 .item-sub
-	display: flex
-	margin-top: 40px
+	.button-more
+		  margin-top: 21px
 	b
 		font-size: 20px
 	p
